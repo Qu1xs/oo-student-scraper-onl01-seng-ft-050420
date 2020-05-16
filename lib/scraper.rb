@@ -18,7 +18,7 @@ class Scraper
         :profile_url => "./fixtures/student-site/" + card.css("a").attribute("href").value
       }
     end
-
+    students
   end
 
   def self.scrape_profile_page(profile_url)
