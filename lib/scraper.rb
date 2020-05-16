@@ -9,9 +9,16 @@ class Scraper
     doc = Nokogiri::HTML(html)
     doc.css
     
-    courses.each do |course|
-      puts course.text.strip
+    names = doc.css()
+    names.each do |name|
+      puts name.text.strip
     end
+    
+    locations = doc.css()
+    locations.each do |location|
+      puts location.text.strip
+    end
+    
   end
 
   def self.scrape_profile_page(profile_url)
