@@ -15,7 +15,7 @@ class Scraper
       student << {
         :name => card.css("h4.student-name"),
         :location => card.css("p.student-location"),
-        :profile_url => card.css("a").attribute("href")
+        :profile_url => "./fixtures/student-site/" + card.css("a").attribute("href").value
       }
     end
 
