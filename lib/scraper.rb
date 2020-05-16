@@ -13,8 +13,8 @@ class Scraper
     
     student_cards.map do |card|
       student << {
-        :name => card.css(""),
-        :location => card.css(""),
+        :name => card.css("h4.student-name"),
+        :location => card.css("p.student-location"),
         :profile_url => card.css("")
       }
     end
