@@ -5,7 +5,11 @@ require 'pry'
 class Scraper
 
   def self.scrape_index_page(index_url)
-    Nokogiri::HTML(open(index_url))
+    html = open(index_url)
+    doc = Nokogiri::HTML(html)
+    doc.css
+    
+    
   end
 
   def self.scrape_profile_page(profile_url)
